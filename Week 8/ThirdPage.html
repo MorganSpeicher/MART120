@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>ThirdPage</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script>
+        function checkboxes() {
+            var firstName = document.getElementById("fName").value;
+            if (firstName == "") {
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fName").focus();
+            }
+            else {
+                document.getElementById("fName").style.backgroundColor = "white";
+            }
+            var lastName = document.getElementById("lName").value;
+            if (lastName == "") {
+                document.getElementById("lName").style.backgroundColor = "red";
+                document.getElementById("lName").focus();
+            }
+            else {
+                document.getElementById("lName").style.backgroundColor = "white";
+            }
+            var email = document.getElementById("email").value;
+            if (email == "") {
+                document.getElementById("email").style.backgroundColor = "red";
+                document.getElementById("email").focus();
+            }
+            else {
+                document.getElementById("email").style.backgroundColor = "white";
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    </script>
+    <h3>Contact Us</h3>
+    <p>
+    <form action="nextPage.html" type="Post">
+        First Name: <input type="text" id="fName"><br>
+        <br>
+        Last Name: <input type="text" id="lName"><br>
+        <br>
+        <form action="nextPage.html" type="Post">
+            Email: <input type="text" id="email"><br>
+        </form>
+        <label for="myCheck">Accept Terms of Service</label>
+        <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+        <p id="text" style="display:none">Checkbox needs to be CHECKED!</p>
+
+        <script>
+            function myFunction() {
+                var checkBox = document.getElementById("myCheck");
+                var text = document.getElementById("text");
+                if (checkBox.checked == false) {
+                    text.style.display = "block";
+                } else {
+                    text.style.display = "none";
+                }
+            }
+        </script>
+        <p>
+        <button id="mySubmit" type="button" class="btn btn-primary" onclick="checkboxes();">Submit</button>
+        </p>
+    </form>
+    </p>
+    <br>
+    <a href="Homepage.html">Home Page</a>
+    <br>
+    <a href="SecondPage.html">Second Page</a>
+
+</body>
+
+</html>
