@@ -43,6 +43,7 @@ function setup() {
     function draw() {
         background(	173, 216, 230);
         for (var i = 0; i < shapeXs.length; i++) {
+            fill(24, 200, 29);
             circle(shapeXs[i], shapeYs[i], myDiameters[i]);
             shapeXSpeeds[i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
             shapeYSpeeds[i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
