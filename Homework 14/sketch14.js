@@ -41,7 +41,7 @@ function setup() {
     }
     
     function draw() {
-
+        background(	173, 216, 230);
         for (var i = 0; i < shapeXs.length; i++) {
             circle(shapeXs[i], shapeYs[i], myDiameters[i]);
             shapeXSpeeds[i] = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
@@ -64,9 +64,31 @@ function setup() {
         if (shapeYs[i] < 0) {
             shapeYs[i] = height;
         }
+        shapeXSpeeds = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+        shapeYSpeeds = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
+    
+        shapeXs += shapeXSpeeds;
+        shapeYs += shapeYSpeeds;
+    
+        if(shapeXs > width)
+        {
+            shapeXs = 0;
+        }
+        if(shapeXs < 0)
+        {
+            shapeXs = width;
+        }
+        if(shapeYs > height)
+        {
+            shapeYs = 0;
+        }
+        if(shapeYs < 0)
+        {
+            shapeYs = height;
+        }
     
 
-    background(	173, 216, 230);
+    
     exit();
     createBorders(10);
     CelebrationMessage();
@@ -164,7 +186,7 @@ function ObstacleMovement()
     {
         shapeY = height;
     }
-}
+
 
 function ObstacleCreation()
 {
@@ -174,6 +196,8 @@ function ObstacleCreation()
     circle(shapeX, shapeY, 15);
     
 }
+}
+
 
 function MouseCharacter()
 {
